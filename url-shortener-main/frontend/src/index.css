@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+
+@layer base{
+    h1 {
+    @apply text-4xl  md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+}
+
+@theme {
+  /* ----------------------------- */
+  /* BLACK SCALE                   */
+  /* ----------------------------- */
+  --color-black-50:   #f6f6f6;
+  --color-black-100:  #e3e3e3;
+  --color-black-200:  #c8c8c8;
+  --color-black-300:  #a4a4a4;
+  --color-black-400:  #7a7a7a;
+  --color-black-500:  #525252;   /* Neutral grey-black */
+  --color-black-600:  #3a3a3a;
+  --color-black-700:  #262626;
+  --color-black-800:  #171717;
+  --color-black-900:  #0d0d0d;
+  --color-black-950:  #000000;   /* Pure black */
+
+
+  /* ----------------------------- */
+  /* BLUE SCALE                    */
+  /* Modern clean UI blue colors   */
+  /* ----------------------------- */
+  --color-blue-50:   #ebf3ff;
+  --color-blue-100:  #d1e5ff;
+  --color-blue-200:  #a3caff;
+  --color-blue-300:  #75afff;
+  --color-blue-400:  #478fff;
+  --color-blue-500:  #1a73e8;     /* Google blue */
+  --color-blue-600:  #155fc2;
+  --color-blue-700:  #104b9c;
+  --color-blue-800:  #0b3876;
+  --color-blue-900:  #072652;
+  --color-blue-950:  #031326;
+
+
+  /* ----------------------------- */
+  /* GRAY SCALE                    */
+  /* This matches Tailwind's gray  */
+  /* ----------------------------- */
+  --color-gray-50:   #f9fafb;
+  --color-gray-100:  #f3f4f6;
+  --color-gray-200:  #e5e7eb;
+  --color-gray-300:  #d1d5db;
+  --color-gray-400:  #9ca3af;
+  --color-gray-500:  #6b7280;
+  --color-gray-600:  #4b5563;
+  --color-gray-700:  #374151;
+  --color-gray-800:  #1f2937;
+  --color-gray-900:  #111827;
+  --color-gray-950:  #0b0f19;
+}
+
+
+
+body {
+    font-family: "Inter",sans-serif;
+}
