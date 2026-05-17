@@ -7,13 +7,20 @@ export const createLink = async ({ fullUrl, userSlug }) => {
   try {
     const size = 8;
 
+    // Payload banate waqt check karenge
+    const payload = {
+      fullUrl,
+      size,
+    };
+
+    // Agar userSlug me kuch type kiya hai tabhi payload me add karo
+    if (userSlug && userSlug.trim() !== "") {
+      payload.userSlug = userSlug.trim();
+    }
+
     const res = await axios.post(
       `${API_URL}/link`,
-      {
-        fullUrl,
-        userSlug,
-        size,
-      },
+      payload,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
