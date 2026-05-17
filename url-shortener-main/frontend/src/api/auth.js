@@ -3,9 +3,13 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { onLoginSuccess } from "../context/useAuthStore";
 
+// Yahan humne environment variable ko ek variable me save kar liya
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const register = async ({ username, email, password }) => {
   try {
-    const res = await axios.post("/api/auth/register", {
+    // API_URL ko request ke aage jod diya
+    const res = await axios.post(`${API_URL}/api/auth/register`, {
       username,
       password,
       email,
@@ -25,7 +29,8 @@ export const register = async ({ username, email, password }) => {
 
 export const login = async ({ email, password }) => {
   try {
-    const res = await axios.post("/api/auth/login", {
+    // API_URL ko request ke aage jod diya
+    const res = await axios.post(`${API_URL}/api/auth/login`, {
       email,
       password,
     });
